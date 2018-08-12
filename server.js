@@ -16,3 +16,11 @@ require('../friendfinder/app/routing/htmlRoutes.js')(app);
 app.listen(PORT, function () {
     console.log('App listening on PORT: ' + PORT);
 });
+
+
+// function compare(userInfo.scores[], friends[i].scores[]) {
+//     const differences = [];
+
+
+// }
+

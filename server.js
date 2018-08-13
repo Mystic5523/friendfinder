@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-var p = path.join(__dirname, '/app/routing/apiRoutes.js')
-var o = path.join(__dirname, '/app/routing/htmlRoutes.js')
+var p = path.join(__dirname, '/routing/apiRoutes.js')
+var o = path.join(__dirname, '/routing/htmlRoutes.js')
 
 require(p)(app);
 require(o)(app);

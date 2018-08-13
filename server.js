@@ -10,15 +10,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
-var p = path.join(__dirname, '/routing/apiRoutes')
-var o = path.join(__dirname, '/routing/htmlRoutes')
+// var p = path.join(__dirname, '/routing/apiRoutes.js')
+// var o = path.join(__dirname, '/routing/htmlRoutes.js')
 
-require(p)(app);
-require(o)(app);
+// require(p)(app);
+// require(o)(app);
+
+require('./app/routing/apiRoutes')(app)
+require('./app/routing/htmlRoutes')(app)
+ 
 
 app.listen(PORT, function () {
-    console.log('App listening on PORT: ' + PORT);
-});
+            console.log('App listening on PORT: ' + PORT);
+        });
 
 
 // function compare(userInfo.scores[], friends[i].scores[]) {

@@ -1,13 +1,14 @@
 var express = require("express");
 var friendslist = require('../data/friends.js')
+var router = express.Router()
 
-module.exports = function (app) {
-    app.get("/api/friends", function (req, res) {
+// module.exports = function (app) {
+    router.get("/friends", function (req, res) {
 
         res.json(friendslist);
     });
 
-    app.post('/api/friends', function (req, res) {
+    router.post('/friends', function (req, res) {
 
         var userInfo = req.body;
         console.log(userInfo.name)
@@ -16,4 +17,5 @@ module.exports = function (app) {
 
     });
 
-}
+    module.exports = router
+// }

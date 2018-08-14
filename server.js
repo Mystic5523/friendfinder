@@ -13,20 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require(p)(app);
 // require(o)(app);
 
-let apiRoutes = require('./app/routing/apiRoutes')
-let htmlRoutes = require('./app/routing/htmlRoutes')
-app.use("/api", apiRoutes)
-app.use("/", htmlRoutes)
+// let apiRoutes = require('./app/routing/apiRoutes')
+// let htmlRoutes = require('./app/routing/htmlRoutes')
+// app.use("/api", apiRoutes)
+// app.use("/", htmlRoutes)
 
 
 app.listen(PORT, function () {
             console.log('App listening on PORT: ' + PORT);
         });
-
-
-// function compare(userInfo.scores[], friends[i].scores[]) {
-//     const differences = [];
-
-
-// }
 

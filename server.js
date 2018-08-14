@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require(o)(app);
 
 // let apiRoutes = require('./app/routing/apiRoutes')
-// let htmlRoutes = require('./app/routing/htmlRoutes')
+let htmlRoutes = require('./app/routing/htmlRoutes')
 // app.use("/api", apiRoutes)
-// app.use("/", htmlRoutes)
+app.use("/", htmlRoutes)
 
 
 app.listen(PORT, function () {

@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // require(p)(app);
 // require(o)(app);
 
-// let apiRoutes = require('./app/routing/apiRoutes')
-let htmlRoutes = require('./app/routing/htmlRoutes')
-// app.use("/api", apiRoutes)
+let apiRoutes = require('./app/routing/apiroutes')
+let htmlRoutes = require('./app/routing/htmlroutes')
+app.use("/api", apiRoutes)
 app.use("/", htmlRoutes)
 
 
